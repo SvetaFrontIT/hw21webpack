@@ -1,0 +1,17 @@
+.container {
+    margin-top: 50px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.col-4 {
+    max-height: 500px;
+    text-decoration: none;
+    overflow: auto;
+}
+
+.card-img-top {
+    max-height: 70px;
+}
