@@ -1,5 +1,4 @@
 import $ from 'jquery';
-
 export class AlbumsView {
     constructor(config) {
         this.config = config;
@@ -11,5 +10,13 @@ export class AlbumsView {
     renderAlbums(response) {
         const album = response.map(album => this.getAlbumItem(album));
         this.$albumsList.html(album);
+    }
+    createAlbumEventListener() {
+        this.$albumsList.on('click', (event) => {
+            if (event.target.classList.contains('js-album')) {
+                this.config.clearPhotos();
+                this.config.getPhotos(event.target.id);
+            }
+        });
     }
 }

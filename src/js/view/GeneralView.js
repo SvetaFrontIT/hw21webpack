@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 export class GeneralView {
-    async createGalleryContainer() {
+    createGalleryContainer() {
         const $main = $('.main')
         return $main.prepend(`<div class="container">
                     <div class="row">
