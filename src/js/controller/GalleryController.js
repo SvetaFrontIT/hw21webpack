@@ -17,7 +17,6 @@ export class GalleryController {
             getPhotos: (albumID) => this.getPhotos(albumID),
         });
         this.$albumsList = $('.js-album-list');
-        this.albumsView.createAlbumEventListener();
     }
     init() {
         this.generalView.createGalleryContainer()
